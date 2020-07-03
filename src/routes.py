@@ -23,4 +23,4 @@ def build_blueprints(api):
 
     @api.exception(SanicException)
     async def http_error_handler(request, exception):
-        return json({'status': 'error', 'payload': [], 'message': exception.args}, status=exception.status_code)
+        return json({'status': 'error', 'payload': [], 'message': exception.args[0]}, status=exception.status_code)
