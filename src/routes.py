@@ -12,11 +12,11 @@ def build_blueprints(api):
 
     # Auth Endpoints
     from src.endpoints.auth import auth  # noqa: E402
-    api.register_blueprint(auth, url_prefix='/auth')
+    api.blueprint(auth, url_prefix='/auth')
 
     # User Endpoints
     from src.endpoints.users import users  # noqa: E402
-    api.register_blueprint(users, url_prefix='/users')
+    api.blueprint(users, url_prefix='/users')
 
     #===============================================================================
     # Error Handling

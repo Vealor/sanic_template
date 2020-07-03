@@ -3,7 +3,6 @@ User Endpoints
 '''
 from sanic import Blueprint
 from sanic.response import json
-from src.errors import NotFoundError
 from src.models import User
 from src.wrappers import exception_wrapper
 
